@@ -14,7 +14,7 @@ from api.schemas import HealthResponse, PatientInput, PredictionResponse
 from src.predict import load_model, predict_risk
 
 # Plain dict holding process-wide state (the loaded model). This is enough
-# for a single-model, single-process portfolio API — no need to reach for
+# for a single-model, single-process portfolio API - no need to reach for
 # a database or cache for something this small.
 MODEL_STATE: dict = {}
 
@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     """Load the model exactly once, when the server process starts.
 
     FastAPI runs the code before `yield` on startup and the code after it
-    on shutdown. Loading here — instead of inside the /predict endpoint —
+    on shutdown. Loading here - instead of inside the /predict endpoint -
     means the (relatively slow) joblib.load only happens once, not on
     every request.
     """
@@ -38,7 +38,7 @@ app = FastAPI(
     title="Heart Disease Risk Predictor",
     description=(
         "Predicts the probability that a patient has heart disease from "
-        "routine clinical data. Portfolio/educational project — NOT a "
+        "routine clinical data. Portfolio/educational project - NOT a "
         "medical diagnostic tool."
     ),
     version="1.0.0",
@@ -68,7 +68,7 @@ def predict(patient: PatientInput) -> PredictionResponse:
     """Predict heart disease risk for one patient.
 
     FastAPI validates the request body against `PatientInput` before this
-    function runs at all — an out-of-range age, an unrecognized chest pain
+    function runs at all - an out-of-range age, an unrecognized chest pain
     type, a missing required field, etc. never reaches this code. The
     caller gets an automatic 422 response with a field-by-field explanation
     of what was wrong.

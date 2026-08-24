@@ -84,13 +84,13 @@ class PredictionResponse(BaseModel):
     disclaimer: str = Field(
         default="This is a portfolio project, not a medical device. It does not diagnose "
         "disease and must not be used to make real clinical decisions.",
-        description="Always included — this tool is for demonstration purposes only.",
+        description="Always included - this tool is for demonstration purposes only.",
     )
 
 
 class HealthResponse(BaseModel):
     # `model_config` below disables pydantic's "model_*" protected-namespace
-    # check — by default it warns because field names starting with
+    # check - by default it warns because field names starting with
     # "model_" usually collide with BaseModel's own internal methods, but
     # here they're just plain data fields describing our ML model, so the
     # warning doesn't apply.
