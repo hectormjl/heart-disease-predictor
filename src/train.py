@@ -26,7 +26,7 @@ from sklearn.model_selection import GridSearchCV, StratifiedKFold, cross_validat
 from sklearn.pipeline import Pipeline
 from xgboost import XGBClassifier
 
-from data_processing import (
+from src.data_processing import (
     PROJECT_ROOT,
     TARGET_COLUMN,
     build_preprocessing_pipeline,
