@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Data (raw/processed files can be large or sensitive; keep folder structure only) ---
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --- Trained models (binaries don't belong in git history) ---
+models/*.pkl
+!models/.gitkeep
+
+# --- Environment / secrets ---
+.env
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+.idea/

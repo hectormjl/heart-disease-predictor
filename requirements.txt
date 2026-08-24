@@ -1,0 +1,22 @@
+# --- Core data science stack ---
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+xgboost==2.1.0
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# --- Notebook support ---
+jupyter==1.0.0
+
+# --- Model persistence ---
+joblib==1.4.2
+
+# --- API ---
+fastapi==0.112.0
+uvicorn[standard]==0.30.5
+pydantic==2.8.2
+
+# --- Testing ---
+pytest==8.3.2
+httpx==0.27.0
