@@ -1,0 +1,52 @@
+{
+  "model_name": "logistic_regression",
+  "trained_at": "2026-08-24T18:46:53.128208+00:00",
+  "cv_comparison": [
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.8126,
+      "accuracy_std": 0.0254,
+      "precision": 0.8272,
+      "precision_std": 0.0476,
+      "recall": 0.8426,
+      "recall_std": 0.0467,
+      "f1": 0.8326,
+      "f1_std": 0.0199,
+      "roc_auc": 0.8923,
+      "roc_auc_std": 0.0205
+    },
+    {
+      "model": "random_forest",
+      "accuracy": 0.8166,
+      "accuracy_std": 0.0267,
+      "precision": 0.825,
+      "precision_std": 0.0484,
+      "recall": 0.8549,
+      "recall_std": 0.0204,
+      "f1": 0.8383,
+      "f1_std": 0.0159,
+      "roc_auc": 0.8816,
+      "roc_auc_std": 0.0307
+    },
+    {
+      "model": "xgboost",
+      "accuracy": 0.7976,
+      "accuracy_std": 0.0392,
+      "precision": 0.8062,
+      "precision_std": 0.0542,
+      "recall": 0.8427,
+      "recall_std": 0.0287,
+      "f1": 0.8225,
+      "f1_std": 0.0275,
+      "roc_auc": 0.8555,
+      "roc_auc_std": 0.03
+    }
+  ],
+  "test_metrics": {
+    "accuracy": 0.8206521739130435,
+    "precision": 0.8108108108108109,
+    "recall": 0.8823529411764706,
+    "f1": 0.8450704225352113,
+    "roc_auc": 0.9027977044476327
+  }
+}
