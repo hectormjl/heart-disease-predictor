@@ -1,6 +1,6 @@
 {
   "model_name": "logistic_regression",
-  "trained_at": "2026-08-24T18:46:53.128208+00:00",
+  "trained_at": "2026-08-25T05:13:52.303684+00:00",
   "cv_comparison": [
     {
       "model": "logistic_regression",

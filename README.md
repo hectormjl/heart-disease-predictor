@@ -91,16 +91,20 @@ trestbps, chol, fbs, restecg, thalch, exang, oldpeak, slope, ca, thal, num`
 column layout (the standard combined UCI Heart Disease CSV). Then:
 
 ```bash
-python src/data_processing.py   # cleans the data, writes data/processed/{train,test}.csv
-python src/train.py             # compares models, tunes the winner, saves models/model.pkl
+python -m src.data_processing   # cleans the data, writes data/processed/{train,test}.csv
+python -m src.train             # compares models, tunes the winner, saves models/model.pkl
 uvicorn api.main:app --reload
 ```
+
+Run these as modules (`python -m src.train`, not `python src/train.py`) — `train.py`
+imports from the `src` package, and that only resolves correctly when Python
+is invoked from the project root with `-m`.
 
 Open http://127.0.0.1:8000/docs for the interactive Swagger UI.
 
 ### With Docker
 
-`models/model.pkl` has to already exist locally (run `python src/train.py`
+`models/model.pkl` has to already exist locally (run `python -m src.train`
 first, as above) — `docker build` copies it from your machine, it doesn't
 train the model itself.
 
